@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}AP Smile Dental Services {% endblock %}
+{% block meta_description %}Find AP Smile current dental services  {% endblock %}
+
+{% block content %}
+
+
+
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url('{% static 'website/img/bg-img/12.jpg' %}');">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Service</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Service</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Services Area Start ***** -->
+  <section class="dento-services-area mt-50 mb-50">
+    <div class="container">
+      <div class="row">
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s6.png' %}" alt="">
+            </div>
+            <h5>Teeth Whitening</h5>
+            <p>Teeth whitening involves bleaching your teeth to make them lighter. It can't make your teeth brilliant white, but it can lighten the existing colour by several shades.</p>
+          </div>
+        </div>
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s7.png' %}" alt="">
+            </div>
+            <h5>Dental Implants</h5>
+            <p>dental implant is a prosthesis that interfaces with the bone of the jaw or skull to support a dental prosthesis such as a crown, bridge, denture, or facial prosthesis or to act as an orthodontic anchor.</p>
+          </div>
+        </div>
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s8.png' %}" alt="">
+            </div>
+            <h5>Missing Teeth</h5>
+            <p> permanent teeth which are lost from a place that once had them. An edentulous site is a position in the mouth previously occupied by a tooth. An edentulous area is a region from which multiple teeth have been lost. Total edentulism is the loss of all teeth.</p>
+          </div>
+        </div>
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s9.png' %}" alt="">
+            </div>
+            <h5>Cosmetic Dentistry</h5>
+            <p>improves the appearance (though not necessarily the functionality) of teeth, gums and/or bite. It primarily focuses on improvement in dental aesthetics in color, position, shape, size, alignment and overall smile appearance.</p>
+          </div>
+        </div>
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s10.png' %}" alt="">
+            </div>
+            <h5>Examination</h5>
+            <p>heckup of your teeth and gums. Most children and adults should get a dental exam every six months. These exams are important for protecting oral health.</p>
+          </div>
+        </div>
+
+        <!-- Single Service Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-service--area text-center mb-50">
+            <div class="icon--">
+              <img src="{% static 'website/img/core-img/s6.png' %}" alt="">
+            </div>
+            <h5>Teeth Pain</h5>
+            <p>tooth pain is caused when the nerve in the root of a tooth or surrounding a tooth is irritated. Dental (tooth) infection, decay, injury, or loss of a tooth are the most common causes of dental pain. Pain may also occur after an extraction (tooth is pulled out)..</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ***** Services Area End ***** -->
+
+  <!-- ***** Testimonials Area Start ***** -->
+  <section class="testimonials-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('{% static 'website/img/bg-img/7.jpg' %}');">
+    <div class="container">
+
+      {% for Testimonial in testimonial_list %}
+      <div class="row">
+        <div class="col-12">
+          <!-- Testimonials Slides -->
+          <div class="testimonials-slides owl-carousel">
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{{ Testimonial.Img_testimonial.url }}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+                <h5>{{ Testimonial.Testimonial_content }}</h5>
+                <h6>{{ Testimonial.Testimonial_Name }}</h6>
+                <p>{{ Testimonial.Testimonial_Identity }}</p>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          </div>
+        </div>
+  </section>
+  <!-- ***** Testimonials Area End ***** -->
+
+  <!-- ***** Blog Area Start ***** -->
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>The Latest News</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+         {% for blog in blog_list %}
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{{ blog.Img_Blog.url }}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title"</a>
+                {{ blog.Blog_title }}
+              <p>{{ blog.Blog_content }}</p>
+              <div class="post-meta">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+          {% endfor %}
+
+        <!-- Single Blog Item -->
+      
+      </div>
+    </div>
+  </section>
+  <!-- ***** Blog Area End ***** -->
+
+  
+{% endblock %}
